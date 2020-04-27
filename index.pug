@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Yellow Studio
+        //- bt4
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        //- font
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;469;500;600;700")
+        //- style
+        link(rel="stylesheet", href="./style.css")
+
+
+    body
+        nav.navbar.fixed-top.navbar-expand-md.navbar-top.at_top.drop_down
+            .container
+                a.navbar-brand(href="#header_index") Yellow Studio
+                .collapse.navbar-collapse
+                    ul.navbar-nav.ml-auto
+                        li.nav-item
+                            a.nav-link(href="#section_about") About
+                        li.nav-item
+                            a.nav-link(href="#section_works") Works
+                        li.nav-item
+                            a.nav-link(href="#section_contact") Contact
+
+        header#header_index
+            .container
+                img.icon(src="https://awiclass.monoame.com/img/webpic/w_icon.svg", alt="")
+                img.marginbottom.mountain(src="https://awiclass.monoame.com/img/margin/m_index.svg", alt="")
+                .explore.at_top EXPLORE
+
+        section#section_about
+            img.marginbottom(src="https://awiclass.monoame.com/img/margin/m_about.svg", alt="")
+            .container
+                .row
+                    .col-sm-8.offset-sm-4
+                        img.tri.tri1(src="https://awiclass.monoame.com/img/webpic/w_tri1.svg", alt="")
+                        h2.r1text WORKS IN YELLOW
+                .row
+                    .col-sm-4
+                        img.tri.tri2(src="https://awiclass.monoame.com/img/webpic/w_tri2.svg", alt="")
+                    .col-sm-8
+                        img.tri.tri3(src="https://awiclass.monoame.com/img/webpic/w_tri3.svg", alt="")
+                        h3.r2text YELLOW STUDIO-Website Design / Development
+                        h3.r2text Interactive Art Design
+                .row
+                    .col-sm-8
+                        h2.r3text 430 MORE SUCCESS CASES
+                .clearfix
+                .row
+                    .col-sm-4.btn-area
+                        a.btn.btn-lg.btn-light(href="#section_works") MORE STORY
+                        img.tri.tri4(src="https://awiclass.monoame.com/img/webpic/w_tri4.svg", alt="")
+                    .col-sm-4
+                        img.tri.tri5(src="https://awiclass.monoame.com/img/webpic/w_tri5.svg", alt="")
+        
+        section#section_service
+            .container
+                .row
+                    .col-12
+                        h1 Service
+                    .col-sm-4
+                        img.icon_service(src="https://awiclass.monoame.com/img/webpic/w_service_icon1.svg", alt="")
+                        h3 CI/VI Design
+                    .col-sm-4
+                        img.icon_service(src="https://awiclass.monoame.com/img/webpic/w_service_icon2.svg", alt="")
+                        h3 MotionFraphic
+                    .col-sm-4
+                        img.icon_service(src="https://awiclass.monoame.com/img/webpic/w_service_icon3.svg", alt="")
+                        h3 Web Development
+                
+        section#section_works
+            .container#app
+                .row(v-if="works.length>0")
+                    .col-12
+                        h1 Works
+                    .col-sm-6.work.big
+                        img(:src="works[1].img", alt="")
+                        .texts
+                            h4.title {{works[1].name}}
+                            p.content(v-html="works[1].content.substr(0,40)")
+                    .col-sm-6
+                        .row
+                            .col-sm-6.work(v-for="w in works.slice(2,6)")
+                                img(:src="w.img", alt="")
+                                .texts
+                                    h4.title {{w.name}} 
+
+
+
+        //- jq
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+        //- bt4
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+        //- vue
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.9/vue.js")
+        //- script
+        script(src="./script.js")

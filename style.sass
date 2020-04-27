@@ -1,0 +1,185 @@
+// 顏色定義
+$color_blue: #282f44 
+$color_brown: #e6af2e 
+$color_yellow: #f5d061 
+$color_white: #ececec
+// -------------------------------
+
+*
+  font-family: 'Oswald','微軟正黑體'
+
+// debug
+// header
+//   display: none
+// #section_about, #section_service
+//   display: none
+// *
+//   border: 1px solid #000 !important
+// -------------------------------
+=ab_center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  
+=size($w,$h)
+  width: $w
+  height: $h
+// -------------------------------
+html,body
+  overflow-x: hidden
+  font-size: 16px
+  position: relative
+  background-color: $color_white
+
+header
+  position: relative
+  background-color: $color_blue
+  text-align: center
+  
+  .icon
+    width: 80%
+    max-width: 250px
+    padding: 250px 0px
+    
+  .marginbottom
+    position: absolute
+    width: 95%
+    bottom: 0px
+    right: -20px
+    animation: upin 2s both
+  
+  @keyframes upin
+    0%
+      bottom: -100px
+    100%
+      bottom: 0
+  
+  .explore
+    +ab_center
+    font-size: 16px
+    top: 85%
+    color: $color_yellow
+    opacity: 0
+    transition: 0.5s
+    &:after
+      display: block
+      content: "v"
+      transform: scaleX(1.2) scaleY(0.5)
+    &.at_top
+      opacity: 1
+// -------------------------------
+nav.navbar
+  transition: 0.5s
+  a
+    transition: 0.5s
+    &:hover
+      color: grey
+  
+nav.navbar.at_top
+  background-color: transparent
+  color: $color_white
+  a
+    color: $color_white
+
+  
+.drop_down
+  background-color: $color_white
+  a
+    color: black
+// -------------------------------
+section
+  padding: 60px 0
+  position: relative
+// -------------------------------
+section#section_about
+  background-color: $color_brown
+  top: -5px
+  .container
+    transform: rotate(15deg) scale(0.9)
+  .row
+    // height: 150px
+    color: black
+    
+    .r1text
+      font-size: 80px
+      font-weight: 500
+      margin: 0
+    .r2text
+      font-size: 35px
+      font-weight: 400
+      margin: 0
+    .r3text
+      font-size: 50px
+      text-align: right
+      margin: 0
+      
+    .btn-area
+      height: 150px
+    a
+      +ab_center
+      transform: translate(-50%, -50%) rotate(10deg)
+  .tri
+    transform: rotate(-15deg)
+  .tri1
+    width: 350px
+  .tri2
+    width: 20px
+    margin-left: 20px
+  .tri3
+    width: 150px
+    margin-left: 70%
+  .tri4
+    width: 70px
+    margin-left: 100%
+  .tri5
+    width: 80px
+    margin-left: 100%
+  .marginbottom
+    position: absolute
+    width: 60%
+    top: calc(100% - 2px)
+    z-index: 3
+// -------------------------------  
+section#section_service    
+  background-color: $color_white
+  .col-sm-4
+    text-align: center
+  h3
+    color: $color_brown
+  .icon_service
+    width: 60%
+// -------------------------------  
+section#section_works
+  background-color: $color_white
+  .work
+    height: 230px
+    cursor: pointer
+    padding: 5px
+    overflow: hidden
+    &:hover
+      &:before,.texts
+        opacity: 1
+    
+    &.big
+      height: 460px
+    &:before
+      content: ""
+      display: block
+      +ab_center
+      +size(100%,100%)
+      background-color: rgba(black,0.7)
+      z-index: 5
+      opacity: 0
+      transition: 0.5s
+      
+    .texts
+      +ab_center
+      color: white
+      z-index: 8
+      opacity: 0
+      transition: 0.5s
+      
+    img
+      height: 100%
+      +ab_center
