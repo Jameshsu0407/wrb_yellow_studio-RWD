@@ -79,12 +79,12 @@ nav.navbar {
   transition: 0.5s;
 }
 
-nav.navbar a {
+nav.navbar a, nav.navbar i {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-nav.navbar a:hover {
+nav.navbar a:hover, nav.navbar i:hover {
   color: grey;
 }
 
@@ -97,8 +97,18 @@ nav.navbar.at_top a {
   color: #ececec;
 }
 
+nav.navbar.at_top i {
+  font-size: 30px;
+  color: #ececec;
+}
+
 .drop_down {
   background-color: #ececec;
+}
+
+.drop_down i {
+  font-size: 30px;
+  color: black;
 }
 
 .drop_down a {
