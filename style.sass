@@ -125,6 +125,29 @@ section#section_about
     a
       +ab_center
       transform: translate(-50%, -50%) rotate(10deg)
+  #cat
+    width: 30%
+    max-width: 300px
+    position: absolute
+    right: 0px
+    bottom: -3px
+    transform: translateX(-50%)
+    @media screen and ( max-width: 1024px )
+      right: -30px
+  #cross
+    position: absolute
+    &:before,&:after
+      content: ""
+      display: block
+      width: 60px
+      height: 15px
+      background-color: #fff
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%) rotate(45deg)
+    &:after
+      transform: translate(-50%,-50%) rotate(136deg)
   .tri
     transform: rotate(-15deg)
   .tri1
@@ -158,6 +181,15 @@ section#section_service
 // -------------------------------  
 section#section_works
   background-color: $color_white
+  .marginbottom
+    position: absolute
+    width: 95%
+    top: 95%
+    right: -20px
+    animation: upin 2s both
+    z-index: 5
+    @media screen and ( max-width: 576px )
+      top: calc( 100% - 2px )
   .work
     height: 230px
     cursor: pointer
@@ -169,6 +201,9 @@ section#section_works
     
     &.big
       height: 460px
+      @media screen and ( max-width: 576px)
+        height: 230px
+        width: 110%
     &:before
       content: ""
       display: block
@@ -189,3 +224,70 @@ section#section_works
     img
       height: 100%
       +ab_center
+      @media screen and ( max-width: 576px)
+        height: auto
+        width: 110%
+        
+        
+// ------------------------------- 
+section#section_contect
+  background-color: $color_blue
+  color: $color_white
+  overflow: hidden
+  .cat
+    width: 150px
+    position: absolute
+    bottom: 0px
+    transition: 0.3s
+    @media screen and ( max-width: 576px )
+      width: 100px
+    
+  #cat_blue
+    right: 240px
+    z-index: 3
+    @media screen and ( max-width: 576px )
+      right: 140px
+  #cat_grey
+    right: 100px
+    @media screen and ( max-width: 576px )
+      right: 0px
+  #cat_yellow
+    right: 170px
+    @media screen and ( max-width: 576px )
+      right: 70px
+  
+  .mails
+    height: 400px
+    .mailbody
+      background-color: $color_white
+      color: $color_blue
+      padding: 20px
+      padding-left: 40px
+      position: absolute
+      width: 90%
+      transform: translateX(-30px)
+    .mailcover
+      +ab_center
+      top: 70%
+      transform: rotate(5deg) scale(2.2) translate(-50%,-50%)
+      img
+        width: 120%
+  
+  input,textarea
+    display: block
+    background-color: transparent
+    border: none
+    border: solid 3px $color_blue
+  textarea
+    height: 140px
+    width: 100%
+// ------------------------------- 
+footer#footer
+  position: relative
+  background-color: $color_brown
+  text-align: center
+  
+  .icon
+    width: 80%
+    max-width: 250px
+    padding: 80px 0px
