@@ -12,14 +12,10 @@ html, body {
 
 .show {
   opacity: 1;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .hide {
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .loading {

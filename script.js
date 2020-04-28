@@ -1,6 +1,8 @@
 setTimeout(function(){
   $(".loading").removeClass("show");
   $(".loading").addClass("hide");
+  $(".loading").css("height","0px");
+  $(".loading").css("width","0px");
 },3000);
 
 $(window).scroll(function(e){
