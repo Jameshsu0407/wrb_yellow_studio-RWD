@@ -186,6 +186,12 @@ section#section_about #cross {
   position: absolute;
 }
 
+@media screen and (max-width: 576px) {
+  section#section_about #cross {
+    opacity: 0;
+  }
+}
+
 section#section_about #cross:before, section#section_about #cross:after {
   content: "";
   display: block;

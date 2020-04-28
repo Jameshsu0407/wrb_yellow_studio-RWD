@@ -36,9 +36,9 @@ $(window).mousemove(function(evt){
   $(".mountain").css("transform","translateX("+(pagex/-20+50)+"px)")
   
   // 文字移動
-  $(".r1text").css("transform","translateX("+(y/-5)+"px)")
-  $(".r2text").css("transform","translateX("+(y/-10)+"px)")
-  $(".r3text").css("transform","translateX("+(y/-12)+"px)")
+    $(".r1text").css("transform","translateX("+(y/-5)+"px)")
+    $(".r2text").css("transform","translateX("+(y/-10)+"px)")
+    $(".r3text").css("transform","translateX("+(y/-12)+"px)")
   
   // 三角形移動
   $(".tri1").css("transform","translateX("+(x/-5)+"px)")
