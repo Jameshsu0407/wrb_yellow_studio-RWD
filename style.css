@@ -171,7 +171,7 @@ section#section_about #cat {
   max-width: 300px;
   position: absolute;
   right: 0px;
-  bottom: -3px;
+  bottom: -5px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
