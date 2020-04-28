@@ -108,6 +108,8 @@ nav.navbar
     transition: 0.5s
     &:hover
       color: grey
+  button:foucs
+    outline-color: $color_white
   
 nav.navbar.at_top
   background-color: transparent
@@ -126,6 +128,11 @@ nav.navbar.at_top
     color: black   
   a
     color: black
+
+.navbar-toggler:focus,.navbar-toggler:active,.navbar-toggler-icon:focus
+    outline: none
+    box-shadow: none
+
 // -------------------------------
 section
   padding: 60px 0
@@ -314,6 +321,8 @@ section#section_contect
     background-color: transparent
     border: none
     border: solid 3px $color_blue
+    &:focus
+      outline: none
   textarea
     height: 140px
     width: 100%

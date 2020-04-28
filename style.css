@@ -152,6 +152,10 @@ nav.navbar a:hover, nav.navbar i:hover {
   color: grey;
 }
 
+nav.navbar button:foucs {
+  outline-color: #ececec;
+}
+
 nav.navbar.at_top {
   background-color: transparent;
   color: #ececec;
@@ -177,6 +181,12 @@ nav.navbar.at_top i {
 
 .drop_down a {
   color: black;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 section {
@@ -500,6 +510,10 @@ section#section_contect input, section#section_contect textarea {
   background-color: transparent;
   border: none;
   border: solid 3px #282f44;
+}
+
+section#section_contect input:focus, section#section_contect textarea:focus {
+  outline: none;
 }
 
 section#section_contect textarea {
